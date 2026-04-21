@@ -4,7 +4,7 @@
 
 # Topic 5: Setting Up VS Code
 
-To build the GTN, you need a place to write code that isn't just a basic notepad. **Visual Studio Code (VS Code)** is a powerful, free editor that makes it easy to see your files, write Markdown, and run terminal commands all in one window.
+To build the GTN, you need a place to write code that isn't just a basic editor. You can definitely do it with vim, emacs or notepad, but it is easier with a modern IDE. **Visual Studio Code (VS Code)** is a powerful, free editor that makes it easy to see your files, write Markdown, and run terminal commands all in one window.
 
 ---
 
@@ -39,7 +39,8 @@ Instead of opening one file at a time, you should open the **entire folder**. It
 3.  Type: `code .`
 4.  VS Code will open with the entire file tree on the left.
 
-You can also do this via the Graphical menu on top. File > Open Folder.
+You can also do this via the Graphical menu on top. `File > Open Folder`.
+
 ---
 
 ## 4. The Integrated Terminal (Your Best Friend)
@@ -47,7 +48,7 @@ You don't need a separate Terminal window anymore!
 
 1.  In VS Code, go to the top menu: **Terminal > New Terminal** (or press ``Ctrl + ` ``).
 2.  This opens a terminal at the bottom of your screen. 
-3.  **Pro-Tip:** You can run your `conda activate gtn-env` and `bundle exec jekyll serve` right here while you look at your code above it.
+3.  **Pro-Tip:** You can run your `conda activate galaxy_training_material` and `make serve-quick HOST=127.0.0.1` right here while you look at your code above it.
 
 ---
 
@@ -68,9 +69,5 @@ On the left sidebar, the third icon down (the "merge" symbol) is the **Source Co
 
 ---
 
-### 💡 The "Clean" Setup
-To make your life easier, go to **File > Auto Save** and turn it on. This way, every time you type something, Jekyll will automatically detect the change and refresh your local website (from Lesson 6).
-
----
-
-Does this feel like it covers enough to get them comfortable in the editor? If so, we're ready to organize the final repository! One relevant follow-up: **Do you want a "Template" for the first GTN tutorial so they have a file to practice editing within VS Code?**
+### The "Clean" Setup
+To make your life easier, go to **File > Auto Save** and turn it on. This way, every time you type something, Jekyll will automatically detect the change and refresh your local website.
