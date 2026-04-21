@@ -67,7 +67,7 @@ make serve-quick HOST=127.0.0.1
   * [Managing Environments](./02-conda-environment-setup.md)
   * [Writing Bash Scripts](./03-bash-scripts.md)
   * [Git & GitHub](./04-git-and-version-control.md)
-  * [VS Code](./05-vs-code)
+  * [VS Code](./05-vs-code.md)
   * [Building the GTN](./06-build-gtn-locally.md)
   * [Building the Galaxy Hub](./07-build-galaxy-hub-locally.md)
   * [Troubleshooting](./08-troubleshooting.md)
