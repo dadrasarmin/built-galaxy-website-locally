@@ -17,7 +17,7 @@ sudo apt update && sudo apt install git curl make
 Then, create a local copy of it on your computer:
 
 ```bash
-git clone --depth 1 --branch main https://github.com/galaxyproject/training-material.git
+git clone --depth 1 --branch main https://github.com/YOUR-USERNAME/training-material.git
 ```
 You need to do this step only once and from now on, you can just get the updates instead of all files.
 
