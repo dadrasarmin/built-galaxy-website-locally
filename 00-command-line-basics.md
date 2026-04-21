@@ -57,7 +57,7 @@ clear
 
 ---
 
-## 💡 How this helps with GTN
+## How this helps with GTN
 When you work on the Galaxy Training Network, you will use these commands to find your tutorial:
 1. `cd training-material` (Enter the project)
 2. `ls topics/` (See all the different subjects)
@@ -68,7 +68,3 @@ When you work on the Galaxy Training Network, you will use these commands to fin
 ### One Final Tip: Paths with Spaces
 If a folder name has a space (like `My Projects`), you must put it in quotes or the terminal will get confused:
 `cd "My Projects"`
-
----
-
-With this "Terminal 101" guide added, you have a truly comprehensive onboarding kit. Do you think your student would benefit from a **"File Structure" guide** that explains where the different parts of the GTN (topics, tutorials, slides) are located?
