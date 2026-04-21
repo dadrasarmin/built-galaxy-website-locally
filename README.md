@@ -9,8 +9,8 @@ When you sit down to work on a tutorial, follow these steps in order:
 | Step | Command | What it does |
 | :--- | :--- | :--- |
 | **1. Update** | `git pull upstream main` | Gets the latest GTN changes from the community. |
-| **2. Prepare** | `conda activate gtn-env` | Switches to your GTN "toolbox." |
-| **3. Launch** | `bundle exec jekyll serve --incremental --limit_posts 10` | Starts the website locally at `localhost:4000`. |
+| **2. Prepare** | `conda activate galaxy_training_material` | Switches to your GTN "toolbox." |
+| **3. Launch** | `make serve-quick HOST=127.0.0.1` | Starts the website locally at `http://localhost:4000/training-material/`. |
 | **4. Save** | `git add .` then `git commit -m "My notes"` | Saves your progress to your "time machine." |
 | **5. Upload** | `git push origin my-branch-name` | Sends your work to GitHub. |
 
@@ -44,10 +44,10 @@ When you sit down to work on a tutorial, follow these steps in order:
 To see your changes, run this command in the root folder:
 
 ```bash
-bundle exec jekyll serve --incremental --limit_posts 10
+make serve-quick HOST=127.0.0.1
 ```
 
-  * **View it at:** [http://localhost:4000](http://localhost:4000)
+  * **View it at:** [http://localhost:4000/training-material/](http://localhost:4000/training-material/)
   * **Stop it with:** `Ctrl + C` (in the terminal)
 
 -----
@@ -62,8 +62,12 @@ bundle exec jekyll serve --incremental --limit_posts 10
 
 ### Navigation
 
+  * [Introduction to Commandline](./00-command-line-basics.md)
   * [How to install Conda](./01-conda-setup.md)
-  * [Managing Environments](./02-conda-envs.md)
+  * [Managing Environments](./02-conda-environment-setup.md)
   * [Writing Bash Scripts](./03-bash-scripts.md)
-  * [Git & GitHub for Beginners](./04-git-basics.md)
-  * [Building the Website](./05-jekyll-build.md)
+  * [Git & GitHub](./04-git-and-version-control.md)
+  * [VS Code](./05-vs-code)
+  * [Building the GTN](./06-build-gtn-locally.md)
+  * [Building the Galaxy Hub](./07-build-galaxy-hub-locally.md)
+  * [Troubleshooting](./08-troubleshooting.md)
