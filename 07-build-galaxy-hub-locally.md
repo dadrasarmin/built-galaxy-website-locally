@@ -1,6 +1,6 @@
 # Topic 7: Building the Galaxy Hub Website (Astro)
 
-The **Galaxy Hub** (the main community site at [galaxyproject.org](https://galaxyproject.org)) is built using **Astro**. While it looks similar to the GTN on the outside, it uses **Node.js** instead of Ruby under the hood.
+The **Galaxy Hub** (the main community site at [galaxyproject.org](https://galaxyproject.org)) is built using **Astro**. While it looks similar to the GTN on the outside, it uses **Node.js** instead of Ruby under the hood. This documentn is based on [this file](https://github.com/galaxyproject/galaxy-hub/blob/main/CONTRIBUTING.md).
 
 ---
 
@@ -10,67 +10,36 @@ The Hub code lives here: [https://github.com/galaxyproject/galaxy-hub](https://g
 1.  **Fork** the repository on GitHub.
 2.  **Clone** your fork to your computer:
     ```bash
-    git clone https://github.com/YOUR-USERNAME/galaxy-hub.git
+    git clone --depth 1 --branch main https://github.com/YOUR-USERNAME/galaxy-hub.git
     cd galaxy-hub
     ```
 
 ---
 
-## 2. Set Up the "Astro" Environment
-Since Astro runs on **Node.js**, we need to tell Conda to give us a "toolbox" that includes it.
+## 2. Set Up the "Astro" modules
+Since Astro runs on **Node.js**, we need to install a couple of tools.
 
 ```bash
-# Create a new environment for the Hub
-# This installs Node.js and npm (the Node Package Manager)
-conda create -n galaxy-hub nodejs=20 -c conda-forge
-
-# Activate it
-conda activate galaxy-hub
+make dev
 ```
 
----
-
-## 3. Install Dependencies
-In the world of Node.js/Astro, we don't use `bundle install`. Instead, we use **`npm`**.
-
-Inside your `galaxy-hub` folder, run:
-```bash
-npm install
-```
-*This reads the `package.json` file and downloads everything Astro needs to run.*
-
----
-
-## 4. Launch the Preview
-To start the local development server, run:
-
-```bash
-npm run dev
-```
-
+*This reads the `package.json` file and downloads everything Astro needs to run, when it is executed for the first time. Aftere that it takes really less time to check.*
 * **View the site:** By default, Astro uses a different "port" than Jekyll. Open your browser to **`http://localhost:4321`**.
 * **Stop the site:** Press `Ctrl + C` in your terminal.
 
----
+Before opening a PR, run:
+```
+make content-lint
+make validate-metadata
+```
 
-## Jekyll (GTN) vs. Astro (Hub) Reference
+Note: The dev server is case-insensitive for URLs but production is case-sensitive. Always use lowercase URLs.
 
-It's helpful to know the "translation" between these two systems:
-
-| Feature | GTN (Jekyll) | Galaxy Hub (Astro) |
-| :--- | :--- | :--- |
-| **Language** | Ruby | Node.js (JavaScript) |
-| **Install Command** | `bundle install` | `npm install` |
-| **Run Command** | `bundle exec jekyll serve` | `npm run dev` |
-| **Default Local URL**| `localhost:4000` | `localhost:4321` |
-| **Configuration** | `_config.yml` | `astro.config.mjs` |
-
----
-
-## 💡 Why the switch?
-If you ask why they are different:
-* **Jekyll** is older and very stable, great for the massive, documentation-heavy GTN.
-* **Astro** is newer and much faster at loading pages, which is why the main "news and community" Hub uses it!
+Sometimes, someone tell you that you have to `build` the website to see the changes. You can do that as follows:
+```bash
+npm run build        # full production build
+npm run preview      # serve the built site locally
+```
 
 ---
 
