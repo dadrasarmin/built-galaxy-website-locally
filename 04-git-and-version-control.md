@@ -39,7 +39,7 @@ Go to the [GTN GitHub Repository](https://github.com/galaxyproject/training-mate
 ### Step B: Cloning
 Copy the URL of **your** fork and type this in your terminal:
 ```bash
-git clone --depth 1 --branch main https://github.com/galaxyproject/training-material.git
+git clone --depth 1 --branch main https://github.com/YOUR-USERNAME/training-material.git
 cd training-material
 ```
 Note: The GTN repo is quite large, therefore we recommend to use the `--depth 1 --branch main` flags here. This will clone only the main branch, and only the most recent revision, rather than the full history.
