@@ -78,15 +78,15 @@ When you start working on the Galaxy Training Network locally, your script might
 #!/bin/bash
 
 # Activate the toolbox we made in Lesson 2
-conda activate gtn-env
+conda activate galaxy_training_material
 
 # Start the local website server
-bundle exec jekyll serve
+make serve-quick HOST=127.0.0.1
 ```
 
 ---
 
-### 💡 Troubleshooting for Beginners
+### Troubleshooting for Beginners
 * **"Permission Denied":** You forgot the `chmod +x` step.
 * **"No such file or directory":** Make sure your terminal is "looking" at the same folder where you saved the script (use `ls` to check).
 * **Windows Users:** If you aren't using Git Bash, bash scripts (.sh) won't run in standard PowerShell. I recommend using **Git Bash** (which comes with Git) to run these.
